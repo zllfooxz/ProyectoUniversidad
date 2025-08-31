@@ -11,9 +11,12 @@ module org.example.proyectouniversidad {
     requires org.kordamp.bootstrapfx.core;
 
     requires com.almasb.fxgl.all;
+    requires static lombok;
 
     opens org.example.proyectouniversidad to javafx.fxml;
-    exports org.example.proyectouniversidad;
+
     exports org.example.proyectouniversidad.Controladores;
     opens org.example.proyectouniversidad.Controladores to javafx.fxml;
+    exports org.example.proyectouniversidad.app;
+    opens org.example.proyectouniversidad.app to javafx.fxml;
 }

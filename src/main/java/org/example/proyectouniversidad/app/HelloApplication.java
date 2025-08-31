@@ -1,4 +1,4 @@
-package org.example.proyectouniversidad;
+package org.example.proyectouniversidad.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
