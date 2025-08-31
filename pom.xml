@@ -20,6 +20,7 @@
             <artifactId>javafx-controls</artifactId>
             <version>17.0.14</version>
         </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
@@ -80,7 +81,7 @@
         <dependency>
             <groupId>eu.hansolo</groupId>
             <artifactId>tilesfx</artifactId>
-            <version>21.0.9</version>
+            <version>11.48</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.openjfx</groupId>
@@ -112,6 +113,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
