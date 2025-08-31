@@ -8,9 +8,13 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="577.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectouniversidad.Controladores.ListaProductosControuller">
+<AnchorPane prefHeight="577.0" prefWidth="726.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.proyectouniversidad.Controladores.ListaProductosControuller">
    <children>
-      <TableView layoutX="-3.0" layoutY="88.0" prefHeight="302.0" prefWidth="706.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0">
+      <TableView layoutX="-3.0" layoutY="88.0" prefHeight="302.0" prefWidth="706.0"
+                 AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0">
         <columns>
           <TableColumn fx:id="IDProducto" prefWidth="75.0" text="ID" />
           <TableColumn fx:id="NombreProducto" prefWidth="244.80001068115234" text="Nombre Del Producto" />

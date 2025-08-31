@@ -3,23 +3,24 @@ package org.example.proyectouniversidad.Controladores;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
+import org.example.proyectouniversidad.domain.Producto;
 
 public class ListaProductosControuller {
 
     @FXML
-    private TableColumn<?, ?> CantidadProducto;
+    private TableColumn<Producto, Integer> CantidadProducto;
 
     @FXML
-    private TableColumn<?, ?> IDProducto;
+    private TableColumn<Producto, Integer> IDProducto;
 
     @FXML
-    private TableColumn<?, ?> NombreProducto;
+    private TableColumn<Producto, String> NombreProducto;
 
     @FXML
-    private TableColumn<?, ?> PrecioProducto;
+    private TableColumn<Producto, Double> PrecioProducto;
 
     @FXML
-    void VolverAtras(ActionEvent event) {
+   private void VolverAtras() {
 
     }
 

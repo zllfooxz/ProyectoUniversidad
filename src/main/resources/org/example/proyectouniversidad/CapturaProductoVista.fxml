@@ -7,12 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="563.0" prefWidth="840.0" scaleShape="false"
-            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.example.proyectouniversidad.Controladores.CapturaProductoControuller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="840.0" scaleShape="false" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectouniversidad.Controladores.CapturaProductoControuller">
    <children>
       <Label alignment="CENTER" layoutX="177.0" layoutY="14.0" text="Captura de Productos" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="193.80000000000007">
          <font>
@@ -24,27 +19,30 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="ID" layoutX="278.0" layoutY="93.0" prefHeight="36.0" prefWidth="338.0" AnchorPane.leftAnchor="278.0" />
+      <TextField fx:id="ID" layoutX="278.0" layoutY="93.0" prefHeight="36.0" prefWidth="338.0" promptText="123456" AnchorPane.leftAnchor="278.0">
+         <font>
+            <Font size="19.0" />
+         </font></TextField>
       <Label layoutX="70.0" layoutY="93.0" text="ID Producto" AnchorPane.leftAnchor="77.0">
          <font>
-            <Font size="25.0" />
+            <Font name="Book Antiqua" size="25.0" />
          </font>
       </Label>
       <Label layoutX="81.0" layoutY="182.0" text="Nombre" AnchorPane.leftAnchor="77.0">
          <font>
-            <Font size="25.0" />
+            <Font name="Bell MT" size="25.0" />
          </font>
       </Label>
       <TextField fx:id="Nombre" layoutX="278.0" layoutY="182.0" prefHeight="36.0" prefWidth="338.0" AnchorPane.leftAnchor="278.4" />
       <Label layoutX="77.0" layoutY="264.0" text="Cantidad" AnchorPane.leftAnchor="77.0">
          <font>
-            <Font size="25.0" />
+            <Font name="Bell MT" size="25.0" />
          </font>
       </Label>
       <TextField fx:id="Cantidad" layoutX="278.0" layoutY="264.0" prefHeight="36.0" prefWidth="338.0" AnchorPane.leftAnchor="278.4" />
       <Label layoutX="77.0" layoutY="346.0" text="Precio" AnchorPane.leftAnchor="77.0">
          <font>
-            <Font size="25.0" />
+            <Font name="Bell MT" size="25.0" />
          </font>
       </Label>
       <TextField fx:id="Precio" layoutX="278.0" layoutY="346.0" prefHeight="36.0" prefWidth="338.0" AnchorPane.leftAnchor="278.4" />

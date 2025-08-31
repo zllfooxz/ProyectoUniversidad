@@ -12,6 +12,9 @@ module org.example.proyectouniversidad {
 
     requires com.almasb.fxgl.all;
     requires static lombok;
+    requires java.desktop;
+
+    requires javafx.graphics;
 
     opens org.example.proyectouniversidad to javafx.fxml;
 
