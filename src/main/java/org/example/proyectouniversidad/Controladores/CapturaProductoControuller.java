@@ -7,9 +7,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+
+
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.example.proyectouniversidad.app.HelloApplication;
+import org.example.proyectouniversidad.domain.Producto;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -57,7 +60,8 @@ public class CapturaProductoControuller {
                 return;
             }
 
-            // guardar el producto
+
+            Producto producto = new Producto(id,nombre,precio,cantidad);
             mostrarAlerta("Éxito", "Producto guardado correctamente.", Alert.AlertType.INFORMATION);
 
         } catch (NumberFormatException e) {

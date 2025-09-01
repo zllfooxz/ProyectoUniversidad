@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 public class Producto {
-    private int id;
+    private String id;
     private String nombre;
     private double precio;
     private int cantidad;

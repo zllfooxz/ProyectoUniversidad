@@ -5,13 +5,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="840.0" scaleShape="false" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectouniversidad.Controladores.CapturaProductoControuller">
    <children>
       <Label alignment="CENTER" layoutX="177.0" layoutY="14.0" text="Captura de Productos" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="193.80000000000007">
          <font>
-            <Font size="39.0" />
+            <Font name="Bodoni MT" size="39.0" />
          </font>
       </Label>
       <Button alignment="CENTER" layoutX="81.0" layoutY="466.0" mnemonicParsing="false" onAction="#GuardarProducto" prefHeight="63.0" prefWidth="174.0" style="-fx-background-color: #76CFE8;" text="Guardar" AnchorPane.leftAnchor="81.0">
@@ -19,13 +20,13 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="ID" layoutX="278.0" layoutY="93.0" prefHeight="36.0" prefWidth="338.0" promptText="123456" AnchorPane.leftAnchor="278.0">
+      <TextField fx:id="ID" layoutX="278.0" layoutY="93.0" prefHeight="36.0" prefWidth="270.0" AnchorPane.leftAnchor="278.0">
          <font>
-            <Font size="19.0" />
+            <Font size="13.0" />
          </font></TextField>
-      <Label layoutX="70.0" layoutY="93.0" text="ID Producto" AnchorPane.leftAnchor="77.0">
+      <Label layoutX="70.0" layoutY="93.0" prefHeight="30.0" prefWidth="136.0" text="ID Producto" AnchorPane.leftAnchor="77.0">
          <font>
-            <Font name="Book Antiqua" size="25.0" />
+            <Font name="Bell MT" size="25.0" />
          </font>
       </Label>
       <Label layoutX="81.0" layoutY="182.0" text="Nombre" AnchorPane.leftAnchor="77.0">
@@ -33,19 +34,22 @@
             <Font name="Bell MT" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="Nombre" layoutX="278.0" layoutY="182.0" prefHeight="36.0" prefWidth="338.0" AnchorPane.leftAnchor="278.4" />
+      <TextField fx:id="Nombre" layoutX="278.0" layoutY="182.0" prefHeight="36.0" prefWidth="270.0" AnchorPane.leftAnchor="278.0">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font></TextField>
       <Label layoutX="77.0" layoutY="264.0" text="Cantidad" AnchorPane.leftAnchor="77.0">
          <font>
             <Font name="Bell MT" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="Cantidad" layoutX="278.0" layoutY="264.0" prefHeight="36.0" prefWidth="338.0" AnchorPane.leftAnchor="278.4" />
+      <TextField fx:id="Cantidad" layoutX="278.0" layoutY="264.0" prefHeight="36.0" prefWidth="270.0" AnchorPane.leftAnchor="278.0" />
       <Label layoutX="77.0" layoutY="346.0" text="Precio" AnchorPane.leftAnchor="77.0">
          <font>
             <Font name="Bell MT" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="Precio" layoutX="278.0" layoutY="346.0" prefHeight="36.0" prefWidth="338.0" AnchorPane.leftAnchor="278.4" />
+      <TextField fx:id="Precio" layoutX="278.0" layoutY="346.0" prefHeight="36.0" prefWidth="270.0" AnchorPane.leftAnchor="278.0" />
       <Button alignment="CENTER" layoutX="567.0" layoutY="448.0" mnemonicParsing="false" onAction="#VerListaProductos" prefHeight="36.0" prefWidth="174.0" style="-fx-background-color: #AFE0DC;" text="Ver Productos Registrados" underline="true">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -59,5 +63,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <VBox layoutX="-3.0" prefHeight="563.0" prefWidth="840.0" />
+      <VBox prefHeight="200.0" prefWidth="100.0" />
    </children>
 </AnchorPane>

@@ -11,7 +11,7 @@ public class ListaProductosControuller {
     private TableColumn<Producto, Integer> CantidadProducto;
 
     @FXML
-    private TableColumn<Producto, Integer> IDProducto;
+    private TableColumn<Producto, String> IDProducto;
 
     @FXML
     private TableColumn<Producto, String> NombreProducto;
