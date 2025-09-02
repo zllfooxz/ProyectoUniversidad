@@ -62,10 +62,12 @@ public class CapturaProductoControuller {
 
 
             Producto producto = new Producto(id,nombre,precio,cantidad);
-            mostrarAlerta("Éxito", "Producto guardado correctamente.", Alert.AlertType.INFORMATION);
+            mostrarAlerta("Éxito", "Producto guardado correctamente.",
+                    Alert.AlertType.INFORMATION);
 
         } catch (NumberFormatException e) {
-            mostrarAlerta("Error", "Precio y cantidad deben ser numéricos.", Alert.AlertType.ERROR);
+            mostrarAlerta("Error", "Precio y cantidad deben ser numéricos.",
+                    Alert.AlertType.ERROR);
         } catch (Exception e) {
             mostrarAlerta("Error inesperado", e.getMessage(), Alert.AlertType.ERROR);
         }

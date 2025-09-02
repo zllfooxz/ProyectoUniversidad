@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="403.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectouniversidad.Controladores.MenuVistaController">
+   <children>
+      <VBox alignment="CENTER" layoutX="187.0" layoutY="102.0" prefHeight="300.0" prefWidth="203.0" spacing="40.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="102.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onGuardarCliente" prefHeight="36.0" prefWidth="139.0" text="cliente" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="42.0" layoutY="144.0" mnemonicParsing="false" onAction="#onGuardarProducto" prefHeight="38.0" prefWidth="139.0" text="Producto" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="42.0" layoutY="184.0" mnemonicParsing="false" onAction="#onFacturarProducto" prefHeight="38.0" prefWidth="139.0" text="Factura" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button alignment="CENTER" layoutX="42.0" layoutY="223.0" mnemonicParsing="false" onAction="#salir" prefHeight="38.0" prefWidth="139.0" text="Salir" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </VBox>
+      <VBox layoutY="110.0" prefHeight="290.0" prefWidth="182.0" />
+      <VBox layoutX="390.0" layoutY="113.0" prefHeight="290.0" prefWidth="203.0" />
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="593.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="150.0" text="Menu" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Bauhaus 93" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

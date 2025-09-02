@@ -1,69 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="840.0" scaleShape="false" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectouniversidad.Controladores.CapturaProductoControuller">
-   <children>
-      <Label alignment="CENTER" layoutX="177.0" layoutY="14.0" text="Captura de Productos" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="193.80000000000007">
-         <font>
-            <Font name="Bodoni MT" size="39.0" />
-         </font>
-      </Label>
-      <Button alignment="CENTER" layoutX="81.0" layoutY="466.0" mnemonicParsing="false" onAction="#GuardarProducto" prefHeight="63.0" prefWidth="174.0" style="-fx-background-color: #76CFE8;" text="Guardar" AnchorPane.leftAnchor="81.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <TextField fx:id="ID" layoutX="278.0" layoutY="93.0" prefHeight="36.0" prefWidth="270.0" AnchorPane.leftAnchor="278.0">
-         <font>
-            <Font size="13.0" />
-         </font></TextField>
-      <Label layoutX="70.0" layoutY="93.0" prefHeight="30.0" prefWidth="136.0" text="ID Producto" AnchorPane.leftAnchor="77.0">
-         <font>
-            <Font name="Bell MT" size="25.0" />
-         </font>
-      </Label>
-      <Label layoutX="81.0" layoutY="182.0" text="Nombre" AnchorPane.leftAnchor="77.0">
-         <font>
-            <Font name="Bell MT" size="25.0" />
-         </font>
-      </Label>
-      <TextField fx:id="Nombre" layoutX="278.0" layoutY="182.0" prefHeight="36.0" prefWidth="270.0" AnchorPane.leftAnchor="278.0">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font></TextField>
-      <Label layoutX="77.0" layoutY="264.0" text="Cantidad" AnchorPane.leftAnchor="77.0">
-         <font>
-            <Font name="Bell MT" size="25.0" />
-         </font>
-      </Label>
-      <TextField fx:id="Cantidad" layoutX="278.0" layoutY="264.0" prefHeight="36.0" prefWidth="270.0" AnchorPane.leftAnchor="278.0" />
-      <Label layoutX="77.0" layoutY="346.0" text="Precio" AnchorPane.leftAnchor="77.0">
-         <font>
-            <Font name="Bell MT" size="25.0" />
-         </font>
-      </Label>
-      <TextField fx:id="Precio" layoutX="278.0" layoutY="346.0" prefHeight="36.0" prefWidth="270.0" AnchorPane.leftAnchor="278.0" />
-      <Button alignment="CENTER" layoutX="567.0" layoutY="448.0" mnemonicParsing="false" onAction="#VerListaProductos" prefHeight="36.0" prefWidth="174.0" style="-fx-background-color: #AFE0DC;" text="Ver Productos Registrados" underline="true">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Berlin Sans FB" size="13.0" />
-         </font>
-      </Button>
-      <Button alignment="CENTER" layoutX="324.0" layoutY="466.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="63.0" prefWidth="174.0" style="-fx-background-color: #FF3B3B;" text="Cancelar">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <VBox layoutX="-3.0" prefHeight="563.0" prefWidth="840.0" />
-      <VBox prefHeight="200.0" prefWidth="100.0" />
-   </children>
-</AnchorPane>
+<BorderPane prefHeight="522.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectouniversidad.Controladores.CapturaProductoControuller">
+    <top>
+        <HBox alignment="CENTER" prefHeight="75.0" prefWidth="659.0">
+            <children>
+                <Label alignment="CENTER" text="Captura de Productos">
+                    <font>
+                        <Font name="Bodoni MT" size="38.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER" spacing="20.0">
+            <children>
+                <!-- Columna de labels -->
+                <VBox alignment="CENTER_LEFT" prefHeight="449.0" prefWidth="230.0">
+                    <children>
+                        <Label prefHeight="30.0" prefWidth="136.0" text="ID Producto">
+                            <font>
+                                <Font name="Bell MT" size="25.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" top="15.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Nombre">
+                            <font>
+                                <Font name="Bell MT" size="25.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" top="50.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Cantidad">
+                            <font>
+                                <Font name="Bell MT" size="25.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" top="50.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Precio">
+                            <font>
+                                <Font name="Bell MT" size="25.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="20.0" top="50.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+
+                <!-- Columna de campos de texto -->
+                <VBox alignment="CENTER" prefHeight="449.0" prefWidth="250.0">
+                    <children>
+                        <TextField fx:id="ID" prefHeight="36.0" prefWidth="270.0">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="Nombre" prefHeight="36.0" prefWidth="270.0">
+                            <font>
+                                <Font name="Bell MT" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="30.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="Cantidad" prefHeight="36.0" prefWidth="270.0">
+                            <VBox.margin>
+                                <Insets top="30.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="Precio" prefHeight="36.0" prefWidth="270.0">
+                            <VBox.margin>
+                                <Insets top="30.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="20.0" style="-fx-padding: 20px;">
+            <children>
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#GuardarProducto" prefHeight="63.0" prefWidth="174.0" style="-fx-background-color: #76CFE8;" text="Guardar">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#Cancelar" prefHeight="63.0" prefWidth="174.0" style="-fx-background-color: #FF3B3B;" text="Cancelar">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#VerListaProductos" prefHeight="36.0" prefWidth="174.0" style="-fx-background-color: #AFE0DC;" text="Ver Productos Registrados" underline="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
