@@ -7,39 +7,37 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-
-
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.example.proyectouniversidad.app.HelloApplication;
+import org.example.proyectouniversidad.Persistencia.GestorArchivosProductos; // ✅ Import específico
 import org.example.proyectouniversidad.domain.Producto;
 
-import javax.swing.*;
 import java.io.IOException;
 
-
 public class CapturaProductoControuller {
-    @FXML
-    private TextField Cantidad;
+
+    @FXML private TextField Cantidad;
+    @FXML private TextField ID;
+    @FXML private TextField Nombre;
+    @FXML private TextField Precio;
+
+    private GestorArchivosProductos gestorProductos;
 
     @FXML
-    private TextField ID;
-
-    @FXML
-    private TextField Nombre;
-
-    @FXML
-    private TextField Precio;
+    public void initialize() {
+        // ✅ Inicializar automáticamente con archivos
+        gestorProductos = new GestorArchivosProductos();
+        System.out.println("Gestor de archivos inicializado");
+    }
 
     @FXML
     void Cancelar(ActionEvent event) {
-
         ID.clear();
-        Cantidad.clear();
         Nombre.clear();
         Precio.clear();
+        Cantidad.clear();
+        ID.requestFocus();
     }
-
 
     @FXML
     private void GuardarProducto(ActionEvent event) {
@@ -49,27 +47,39 @@ public class CapturaProductoControuller {
             String precioTexto = Precio.getText().trim();
             String cantidadTexto = Cantidad.getText().trim();
 
+            // Validaciones
             if (id.isEmpty() || nombre.isEmpty() || precioTexto.isEmpty() || cantidadTexto.isEmpty()) {
                 mostrarAlerta("Error", "Todos los campos son obligatorios.", Alert.AlertType.ERROR);
                 return;
             }
+
             double precio = Double.parseDouble(precioTexto);
             int cantidad = Integer.parseInt(cantidadTexto);
+
             if (precio < 0 || cantidad < 0) {
                 mostrarAlerta("Error", "Precio y cantidad no pueden ser negativos.", Alert.AlertType.ERROR);
                 return;
             }
 
+            // ✅ Verificar si el ID ya existe
+            if (gestorProductos.buscarProducto(id) != null) {
+                mostrarAlerta("Error", "El ID del producto ya existe.", Alert.AlertType.ERROR);
+                return;
+            }
 
-            Producto producto = new Producto(id,nombre,precio,cantidad);
-            mostrarAlerta("Éxito", "Producto guardado correctamente.",
-                    Alert.AlertType.INFORMATION);
+            // Crear y guardar producto
+            Producto producto = new Producto(id, nombre, precio, cantidad);
+            gestorProductos.agregarProducto(producto);
+
+            mostrarAlerta("Éxito", "Producto guardado correctamente!\nTotal productos: " +
+                    gestorProductos.getTotalProductos(), Alert.AlertType.INFORMATION);
+
+            Cancelar(null);
 
         } catch (NumberFormatException e) {
-            mostrarAlerta("Error", "Precio y cantidad deben ser numéricos.",
-                    Alert.AlertType.ERROR);
+            mostrarAlerta("Error", "Precio y cantidad deben ser números válidos.", Alert.AlertType.ERROR);
         } catch (Exception e) {
-            mostrarAlerta("Error inesperado", e.getMessage(), Alert.AlertType.ERROR);
+            mostrarAlerta("Error", "Error inesperado: " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
@@ -81,25 +91,17 @@ public class CapturaProductoControuller {
         alerta.showAndWait();
     }
 
-
-
     @FXML
     private void VerListaProductos(ActionEvent event) {
-
         try {
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource
-                    ("/org/example/proyectouniversidad/ListaDeProductos.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
+                    "/org/example/proyectouniversidad/ListaDeProductos.fxml"));
             Parent root = fxmlLoader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root, 750, 620));
             stage.show();
-
-        } catch (RuntimeException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            mostrarAlerta("Error", "No se pudo cargar la lista: " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 }

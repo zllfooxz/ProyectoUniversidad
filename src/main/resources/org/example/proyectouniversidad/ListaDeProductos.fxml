@@ -7,22 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="577.0" prefWidth="726.0"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.example.proyectouniversidad.Controladores.ListaProductosControuller">
+<AnchorPane prefHeight="577.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectouniversidad.Controladores.ListaProductosControuller">
    <children>
-      <TableView layoutX="-3.0" layoutY="88.0" prefHeight="302.0" prefWidth="706.0"
-                 AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0">
-        <columns>
-          <TableColumn fx:id="IDProducto" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="NombreProducto" prefWidth="244.80001068115234" text="Nombre Del Producto" />
-            <TableColumn fx:id="CantidadProducto" prefWidth="158.39996337890625" text="Cantidas" />
-            <TableColumn fx:id="PrecioProducto" prefWidth="216.79998779296875" text="Precio" />
-        </columns>
-      </TableView>
-      <Button layoutX="521.0" layoutY="452.0" mnemonicParsing="false" onAction="#VolverAtras" prefHeight="39.0" prefWidth="121.0" text="volver " />
+       <TableView fx:id="tablaProductos" layoutX="133.0" layoutY="124.0" prefHeight="300" prefWidth="400" AnchorPane.bottomAnchor="153.0" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="193.0" AnchorPane.topAnchor="124.0">
+           <columns>
+               <TableColumn fx:id="columnaId" prefWidth="50" text="ID" />
+               <TableColumn fx:id="columnaNombre" prefWidth="150" text="Nombre" />
+               <TableColumn fx:id="columnaPrecio" prefWidth="100" text="Precio" />
+               <TableColumn fx:id="columnaCantidad" prefWidth="100" text="Cantidad" />
+           </columns>
+       </TableView>
+
+
+       <Button layoutX="521.0" layoutY="452.0" mnemonicParsing="false" onAction="#VolverAtras" prefHeight="39.0" prefWidth="121.0" text="volver " />
       <Label layoutX="193.0" layoutY="36.0" prefHeight="31.0" prefWidth="320.0" text="LISTA DE PRODUCTOS ACTUALES" AnchorPane.leftAnchor="192.39999999999998" AnchorPane.rightAnchor="213.20000000000005">
          <font>
             <Font name="Bell MT" size="19.0" />

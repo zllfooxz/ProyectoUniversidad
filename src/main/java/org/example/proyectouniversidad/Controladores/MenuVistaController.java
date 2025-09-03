@@ -1,5 +1,6 @@
 package org.example.proyectouniversidad.Controladores;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -62,6 +63,6 @@ public class MenuVistaController {
 
     @FXML
    protected void salir(ActionEvent event) {
-
+        Platform.exit();
     }
 }
