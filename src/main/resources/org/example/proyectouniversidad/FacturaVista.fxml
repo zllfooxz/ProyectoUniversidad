@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-
 <AnchorPane prefHeight="574.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectouniversidad.Controladores.FacturaController">
    <children>
       <HBox alignment="CENTER" prefHeight="70.0" prefWidth="779.0">
@@ -16,27 +15,28 @@
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="180.0" text="Factura" textAlignment="CENTER" />
          </children>
       </HBox>
-      <TextField layoutX="213.0" layoutY="85.0" />
+      <TextField fx:id="idCliente" layoutX="213.0" layoutY="85.0" />
       <Label layoutX="96.0" layoutY="89.0" text="Buscar Cliente" />
-      <Button layoutX="400.0" layoutY="84.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="112.0" text="buscar cliente " />
+      <Button layoutX="400.0" layoutY="84.0" mnemonicParsing="false" onAction="#onBuscarClient" prefHeight="26.0" prefWidth="112.0" text="buscar cliente " />
       <Button layoutX="612.0" layoutY="84.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="crear nuevo cliente" />
-      <TableView layoutX="-3.0" layoutY="190.0" prefHeight="210.0" prefWidth="779.0">
-        <columns>
-          <TableColumn prefWidth="94.39996337890625" text="ID Producto" />
-          <TableColumn prefWidth="124.00006103515625" text="Nombre Producto" />
-            <TableColumn prefWidth="124.00006103515625" text="cantidad a comprar" />
-            <TableColumn prefWidth="124.00006103515625" text="Presio con iva" />
-            <TableColumn prefWidth="124.00006103515625" text="presio sin iva" />
-            <TableColumn prefWidth="168.00003662109373" text="presio total" />
-        </columns>
-      </TableView>
-      <Button layoutX="14.0" layoutY="443.0" mnemonicParsing="false" text="Buscar Producto" />
+       <TableView fx:id="table" layoutX="-3.0" layoutY="190.0" prefHeight="210.0" prefWidth="779.0">
+           <columns>
+               <TableColumn fx:id="idProducto" prefWidth="94.39" text="ID Producto" />
+               <TableColumn fx:id="nomProducto" prefWidth="248.00" text="Nombre Producto" />
+               <TableColumn fx:id="precioProducto" prefWidth="179.20" text="Precio Unitario" />
+               <TableColumn fx:id="cantidadComprar" prefWidth="88.00" text="Cantidad" />
+               <!-- ✅ CORREGIR el nombre: "precioTotal" en lugar de "presioProducto" -->
+               <TableColumn fx:id="precioTotal" prefWidth="268.80" text="Precio Total" />
+           </columns>
+       </TableView>
+      <Button layoutX="14.0" layoutY="443.0" mnemonicParsing="false" onAction="#onBuscarProducto" text="Buscar Producto" />
       <Button layoutX="20.0" layoutY="484.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Facturar" />
       <Label layoutX="456.0" layoutY="409.0" prefHeight="26.0" prefWidth="52.0" text="TOTAL: " />
       <Label fx:id="totalPagar" layoutX="567.0" layoutY="409.0" prefHeight="34.0" prefWidth="190.0" />
       <Label layoutX="37.0" layoutY="116.0" text="Nombre: " />
       <Label layoutX="37.0" layoutY="137.0" prefHeight="18.0" prefWidth="50.0" text="ID: " />
-      <Label layoutX="102.0" layoutY="116.0" prefHeight="18.0" prefWidth="128.0" text="..." />
-      <Label layoutX="102.0" layoutY="137.0" prefHeight="18.0" prefWidth="128.0" text="..." />
+      <Label fx:id="textoNomCliente" layoutX="102.0" layoutY="116.0" prefHeight="18.0" prefWidth="128.0" text="..." />
+       <Label fx:id="texoIDCliente" layoutX="102.0" layoutY="137.0" prefHeight="18.0" prefWidth="128.0" text="..." />
+      <TextField fx:id="TexFidProducto" layoutX="139.0" layoutY="443.0" />
    </children>
 </AnchorPane>

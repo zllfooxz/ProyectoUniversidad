@@ -1,13 +1,15 @@
 package org.example.proyectouniversidad.domain;
 
-public class Cliente {
+import java.io.Serializable;
+
+public class Cliente implements Serializable {
    private  String id;
    private  String nombre;
    private String direccion;
    private String correo;
+    private static final long serialVersionUID = 1L;
 
-    public Cliente() {
-    }
+
     public Cliente(String id, String nombre, String direccion, String correo) {
 
         this.id = id;

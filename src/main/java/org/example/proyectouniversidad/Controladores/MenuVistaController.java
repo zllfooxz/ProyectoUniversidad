@@ -16,7 +16,17 @@ public class MenuVistaController {
 
     @FXML
     protected void onFacturarProducto(ActionEvent event) {
+        try{
 
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/proyectouniversidad/FacturaVista.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     @FXML

@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.proyectouniversidad.Persistencia.GestorArchivosClientes;
 import org.example.proyectouniversidad.domain.Cliente;
 
 import java.io.IOException;
@@ -40,7 +41,8 @@ public class CapturaClienteController {
         }
 
         Cliente cliente = new Cliente(id, nombre,direccion,correo);
-
+        GestorArchivosClientes gestorArchivosClientes= new GestorArchivosClientes();
+        gestorArchivosClientes.agregarCliente(cliente);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
 
@@ -53,7 +55,7 @@ public class CapturaClienteController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/proyectouniversidad/MenuVista.fxml"));
             Parent root = loader.load();
             Stage stage= (Stage) ((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root, 750, 620));
+            stage.setScene(new Scene(root));
             stage.show();
         }catch (IOException e) {
             e.printStackTrace();
